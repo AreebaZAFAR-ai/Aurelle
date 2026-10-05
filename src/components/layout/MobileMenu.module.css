@@ -1,0 +1,37 @@
+.overlay {
+  position: fixed; inset: 0; z-index: 80;
+  background: var(--ink);
+  color: var(--text-on-dark);
+  display: flex; flex-direction: column;
+  padding: 0 var(--gutter) 28px;
+  overflow-y: auto;
+}
+
+.top {
+  height: var(--header-h);
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  flex-shrink: 0;
+}
+.close { display: inline-flex; align-items: center; gap: 8px; font-size: 0.84rem; min-height: 44px; color: #e3dbcd; }
+.logo { color: var(--gold); }
+
+.nav { margin-top: clamp(28px, 8vh, 64px); }
+.nav li { border-bottom: 1px solid var(--line-on-dark); }
+.nav a {
+  display: block;
+  padding: 12px 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 9vw, 2.8rem);
+  line-height: 1.1;
+  color: var(--text-on-dark);
+}
+.nav a:active { color: var(--gold); }
+
+.collections {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  margin-top: 32px;
+}
+.collections a { display: grid; gap: 8px; font-size: var(--fs-micro); color: #e3dbcd; }
+.collections img { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; }
+
+.foot { margin-top: auto; padding-top: 32px; font-size: var(--fs-small); color: #a59e92; }

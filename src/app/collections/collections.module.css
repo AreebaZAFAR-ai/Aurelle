@@ -1,0 +1,39 @@
+.list { display: grid; gap: clamp(80px, 10vw, 160px); }
+
+.row {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(32px, 6vw, 120px);
+  align-items: center;
+}
+.row:nth-child(even) .media { order: 2; }
+
+.media { position: relative; display: block; padding-bottom: 8%; }
+.media > img:first-child {
+  width: 82%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+.media[data-flip] > img:first-child { margin-left: auto; }
+.inset {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 38%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: clamp(6px, 0.7vw, 12px) solid var(--cream);
+  transition: transform 1.2s var(--ease);
+}
+.media[data-flip] .inset { right: auto; left: 0; }
+.media:hover > img:first-child { transform: scale(1.02); }
+.media:hover .inset { transform: translateY(-12px); }
+
+.copy { display: grid; gap: 20px; justify-items: start; max-width: 460px; }
+.copy p { color: var(--text-muted); }
+
+@media (max-width: 800px) {
+  .row { grid-template-columns: 1fr; }
+  .row:nth-child(even) .media { order: 0; }
+}
