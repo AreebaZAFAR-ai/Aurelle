@@ -2,19 +2,13 @@ import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { IndexList, type IndexItem } from "@/components/home/IndexList";
 import { SignatureCollections } from "@/components/home/SignatureCollections";
-import { Spotlight } from "@/components/home/Spotlight";
 import { Statement } from "@/components/home/Statement";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FilterableGrid } from "@/components/product/FilterableGrid";
 import { Reveal } from "@/components/Reveal";
 import { testimonials } from "@/data/content";
 import { editorial } from "@/data/editorial";
-import { featuredProducts, getProduct, products } from "@/data/products";
-import type { Product } from "@/data/products";
-
-const spotlight = ["pearl-strand-necklace", "classic-tennis-bracelet", "oval-halo-ring", "pearl-cluster-drops"]
-  .map(getProduct)
-  .filter((p): p is Product => Boolean(p));
+import { featuredProducts, products } from "@/data/products";
 
 const index: IndexItem[] = [
   { title: "Layered Pearls", href: "/collections/necklaces", poster: "/media/img/edit-layered-pearls.webp" },
@@ -53,7 +47,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Spotlight products={spotlight} />
       <Testimonials
         items={testimonials}
         images={[editorial.pearlDrop, editorial.layeredPearls, editorial.pearlChoker, editorial.sculptedGold]}
