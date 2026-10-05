@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LazyVideo } from "@/components/LazyVideo";
 import { Wordmark } from "@/components/Logo";
 import { Newsletter } from "@/components/Newsletter";
 import { collections } from "@/data/collections";
@@ -49,6 +50,9 @@ export function Footer() {
       </div>
 
       <div className={styles.bottom}>
+        <div className={styles.film}>
+          <LazyVideo src="/media/video/footer-jewelry.mp4" poster="/media/video/footer-jewelry-poster.jpg" />
+        </div>
         <div className={styles.word} aria-hidden="true">
           <Wordmark tracking={0.06} />
         </div>

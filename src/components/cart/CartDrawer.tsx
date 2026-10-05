@@ -68,7 +68,7 @@ export function CartDrawer() {
                   {lines.map(({ slug, qty, product }) => (
                     <li key={slug} className={styles.line}>
                       <Link href={`/product/${slug}`} onClick={close} className={styles.thumb}>
-                        <img src={product.image} alt={product.name} />
+                        <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
                       </Link>
                       <div className={styles.info}>
                         <div className={styles.row}>

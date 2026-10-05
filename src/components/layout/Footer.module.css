@@ -20,6 +20,14 @@
 .news p { font-size: var(--fs-small); opacity: 0.85; max-width: 32ch; }
 
 .bottom { position: relative; }
+.film {
+  width: clamp(180px, 20vw, 300px);
+  aspect-ratio: 4 / 3;
+  margin: 0 auto clamp(20px, 2.4vw, 36px);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+}
+.film video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .word {
   font-family: var(--font-display);
   text-transform: uppercase;

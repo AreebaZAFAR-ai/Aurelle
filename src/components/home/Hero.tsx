@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { preload } from "react-dom";
 import { motion, useMotionTemplate, useMotionValue, useScroll, useTransform } from "motion/react";
 import { LazyVideo } from "@/components/LazyVideo";
 import { LogoMark } from "@/components/Logo";
@@ -45,6 +46,10 @@ export function Hero({
     </>
   ),
 }: Props = {}) {
+  // The centre panel is the first thing painted, so fetch its still ahead of the scripts.
+  const lead = panels[1];
+  if (lead) preload("images" in lead ? lead.images[0] : lead.poster, { as: "image", fetchPriority: "high" });
+
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end end"] });
 

@@ -46,8 +46,8 @@ export function IndexList({ items }: { items: IndexItem[] }) {
               <LazyVideo src={items[active].video} poster={items[active].poster} />
             ) : (
               <>
-                <img src={items[active].poster} alt="" className={styles.fill} />
-                <img src={items[active].poster} alt="" className={styles.whole} />
+                <img src={items[active].poster} alt="" loading="lazy" decoding="async" className={styles.fill} />
+                <img src={items[active].poster} alt="" loading="lazy" decoding="async" className={styles.whole} />
               </>
             )}
           </motion.div>
