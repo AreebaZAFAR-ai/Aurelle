@@ -10,12 +10,12 @@ import { site } from "@/lib/site";
 import styles from "./Hero.module.css";
 
 /** A film, or a set of stills that crossfade. */
-export type HeroPanel = { src: string; poster?: string } | { images: string[] };
+export type HeroPanel = { src: string; poster: string } | { images: string[] };
 
 const homePanels: HeroPanel[] = [
-  { src: "/media/video/jewelry2.mp4", poster: "/media/video/jewelry2-poster.jpg" },
+  { src: "/media/video/hero-earcuff.mp4", poster: "/media/video/hero-earcuff-poster.jpg" },
+  { src: "/media/video/hero-riviera.mp4", poster: "/media/video/hero-riviera-poster.jpg" },
   { src: "/media/video/hero-evening.mp4", poster: "/media/video/hero-evening-poster.jpg" },
-  { src: "/media/video/sparkle.mp4", poster: "/media/video/sparkle-poster.jpg" },
 ];
 
 type Props = {
@@ -48,8 +48,7 @@ export function Hero({
 }: Props = {}) {
   // The centre panel is the first thing painted, so fetch its still ahead of the scripts.
   const lead = panels[1];
-  const leadStill = lead && ("images" in lead ? lead.images[0] : lead.poster);
-  if (leadStill) preload(leadStill, { as: "image", fetchPriority: "high" });
+  if (lead) preload("images" in lead ? lead.images[0] : lead.poster, { as: "image", fetchPriority: "high" });
 
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end end"] });

@@ -51,7 +51,7 @@ export default function HomePage() {
         items={testimonials}
         images={[editorial.pearlDrop, editorial.layeredPearls, editorial.pearlChoker, editorial.sculptedGold]}
       />
-      <Statement lines={["Elegance in", "every detail,", "every day"]} image="/media/video/jewelry4-poster.jpg" video="/media/video/jewelry4.mp4" />
+      <Statement lines={["Elegance in", "every detail,", "every day"]} image="/media/video/sparkle-poster.jpg" video="/media/video/sparkle.mp4" />
       <IndexList items={index} />
     </>
   );
