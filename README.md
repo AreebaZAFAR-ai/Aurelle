@@ -44,7 +44,7 @@ Special responsive behavior is implemented for the hero experience and visual me
 🌐 Live Demo
 
 Vercel Deployment:
-https://vercel.com/areeba-zafar-s-projects/aurelle/6GStkspr28TZFtDbE5u4oZKEzAg2
+https://aurelle-git-main-areeba-zafar-s-projects.vercel.app/
 
 📂 Project Structure
 Aurelle/
