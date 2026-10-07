@@ -7,8 +7,9 @@ import styles from "./Statement.module.css";
 
 type Props = {
   lines: string[];
-  image: string;
-  /** Plays in place of the image when given; the image is its poster. */
+  /** Required without `video`; with one it is the film's poster. */
+  image?: string;
+  /** Plays in place of the image when given. */
   video?: string;
   /** Background behind the frame before it expands. */
   tone?: "cream" | "gold";

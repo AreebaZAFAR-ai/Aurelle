@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   src: string;
-  poster: string;
+  /** Still shown until the film loads; without one the panel stays on its background. */
+  poster?: string;
   className?: string;
   /** Load immediately rather than when scrolled near (use for above-the-fold video). */
   eager?: boolean;

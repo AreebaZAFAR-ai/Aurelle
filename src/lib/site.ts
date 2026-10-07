@@ -1,10 +1,10 @@
 /**
  * Brand configuration.
- * Brand name: Pearls. PLACEHOLDER: the contact details and socials below are temporary —
+ * Brand name: Aurelle. PLACEHOLDER: the contact details and socials below are temporary —
  * replace them with your real brand information. Everything on the site reads from here.
  */
 export const site = {
-  name: "Pearls",
+  name: "Aurelle",
   tagline: "Fine jewelry, considered.",
   description:
     "Rings, necklaces, earrings and bracelets — an edited collection of fine jewelry made to be worn every day and kept for a lifetime.",
