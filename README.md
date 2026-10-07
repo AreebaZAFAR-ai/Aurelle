@@ -83,3 +83,4 @@ GitHub: https://github.com/AreebaZAFAR-ai
 LinkedIn: https://www.linkedin.com/in/areebazaafar/
 Portfolio: https://areeba-portfolio-ashy.vercel.app/
 email: areebazafaar@gmail.com
+<img width="947" height="433" alt="Screenshot 2026-10-07 083647" src="https://github.com/user-attachments/assets/54837de6-a9a3-46d9-a156-466d6bf2e512" />
